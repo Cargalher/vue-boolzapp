@@ -12,9 +12,7 @@ img{
     display: flex;
     width: 100%;
 }
-aside{
-   
-}
+
 
 .user_name{
     background-color: #EAEAEA;
@@ -49,9 +47,7 @@ i{
     width: 100%;
     padding: 10px;
 }
-.user-list{
-  
-}
+
 li{
     list-style-type: none;
     padding:20px 0;
