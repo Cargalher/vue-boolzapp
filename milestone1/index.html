@@ -51,27 +51,27 @@
                 <!-- User list -->
                 <div class="user-list d-flex  flex-column border">
                     <ul>
-                        <li>
+                        <li v-for="(contact, index) in contacts">
                             <div class="avatar d-flex ">
-                                <img src="./img/avatar_1.jpg" alt="" class="d-flex align-items-center ">
+                                <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="" class="d-flex align-items-center ">
                                 <p class="d-flex align-items-center">Mark</p>
                             </div>
                         </li>
-                        <li>
+                        <li v-for="(contact, index) in contacts">
                             <div class="avatar d-flex">
-                                <img src="./img/avatar_2.jpg" alt="" class="d-flex align-items-center ">
+                                <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="" class="d-flex align-items-center ">
                                 <p class="d-flex align-items-center">Jack</p>
                             </div>
                         </li>
-                        <li>
+                        <li v-for="(contact, index) in contacts">
                             <div class="avatar d-flex">
-                                <img src="./img/avatar_3.jpg" alt="" class="d-flex align-items-center ">
+                                <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="" class="d-flex align-items-center ">
                                 <p class="d-flex align-items-center">Leo</p>
                             </div>
                         </li>
-                        <li>
+                        <li v-for="(contact, index) in contacts">
                             <div class="avatar d-flex">
-                                <img src="./img/avatar_4.jpg" alt="" class="d-flex align-items-center ">
+                                <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="" class="d-flex align-items-center ">
                                 <p class="d-flex align-items-center">Tristan</p>
                             </div>
                         </li>
