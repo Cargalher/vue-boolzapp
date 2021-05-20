@@ -51,7 +51,7 @@
                 <div class="user-list d-flex  flex-column border">
                     <ul>
                         <li v-for="(contact, index) in contacts">
-                            <div class="avatar d-flex ">
+                            <div class="avatar d-flex " @click="selectPerson">
                                 <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="" class="d-flex align-items-center ">
                                 <p class="d-flex align-items-center">{{contact.name}}</p>
                                 
@@ -69,6 +69,7 @@
                 <!-- top -->
                 <div class="top_main d-flex align-items-center justify-content-between p-2">
                     <div class="d-flex mr-4">
+                        <!-- {{avatar}} -->
                         <img src="./img/avatar_1.jpg" alt="" class="d-flex align-items-center ">
                         <p class="d-flex align-items-center">Fred</p>
                     </div>
@@ -82,14 +83,14 @@
 
                 <!-- center -->
                 <div class="central_main">
-                    <p>{{userMsg}}</p>
+                    <p>{{conversation}}</p>
                 </div>
                 <!-- /center -->
 
                 <!-- bottom -->
                 <div class="bottom_main d-flex align-items-center">
                     <i class="far fa-smile mr-3 text-secondary"></i>
-                    <!-- <input v-model="conversation" placeholder="Scrivi un messaggio" @keyup.enter="addTask"> -->
+                   
                     <input v-model="conversation" class="input_write" type="text" name="" id="" placeholder="Scrivi un messaggio" @keyup.enter="sendMessage">
                     <i class="fas fa-microphone ml-3 text-secondary"></i>
                 </div>
