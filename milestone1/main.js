@@ -2,7 +2,7 @@ const app = new Vue({
     el: '#root',
     data:{
         conversation: '',
-        userMsg: [],
+        userMsg: [''],
         contacts: [
             {
                 name: 'Fred',
@@ -93,7 +93,7 @@ const app = new Vue({
     methods:{
          /** write a message */
          sendMessage(){
-            this.userMsg.push(this.conversation)
+            this.userMsg.unshift(this.conversation)
             this.conversation = ''
         },
     }
