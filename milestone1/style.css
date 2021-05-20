@@ -9,8 +9,8 @@ img{
 }
 .wrapper{
     
-    display: flex;
-    width: 100%;
+    
+    
 }
 
 
@@ -55,6 +55,7 @@ li{
 }
 .user-list{
     background-color: white;
+    overflow-y: auto;
 }
 /* MAIN */
 main{
