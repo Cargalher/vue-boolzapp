@@ -54,7 +54,8 @@
                         <li v-for="(contact, index) in contacts">
                             <div class="avatar d-flex ">
                                 <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="" class="d-flex align-items-center ">
-                                <p class="d-flex align-items-center" v-for="contact in contacts">{{contact.name}}</p>
+                                <p class="d-flex align-items-center">{{contact.name}}</p>
+                                
                             </div>
                         </li>
                     </ul>
@@ -70,7 +71,7 @@
                 <div class="top_main d-flex align-items-center justify-content-between p-2">
                     <div class="d-flex mr-4">
                         <img src="./img/avatar_1.jpg" alt="" class="d-flex align-items-center ">
-                        <p class="d-flex align-items-center">Mark</p>
+                        <p class="d-flex align-items-center">Fred</p>
                     </div>
                     <div class="ml-4">
                         <i class="fas fa-search p-2"></i>
