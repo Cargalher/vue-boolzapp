@@ -54,7 +54,7 @@ li{
 }
 .user-list{
     background-color: white;
-    overflow-y: auto;
+    overflow-Y: scroll;
 }
 /* MAIN */
 main{
@@ -68,7 +68,7 @@ main{
 .central_main{
 background-image: url(./img/wallpaper.jpg);
 height: 75vh;
-
+overflow-Y: scroll;
 }
 .input_write{
     border:1px solid lightgrey;
