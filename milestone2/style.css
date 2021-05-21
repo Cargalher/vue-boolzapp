@@ -95,5 +95,9 @@ overflow-Y: scroll;
 
 }
 .white_chat{
-    
+    background-color: white;
+    padding: 4px;
+    width: 20%;
+    border-radius: 5px;
+    margin: 20px;
 }
