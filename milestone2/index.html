@@ -90,10 +90,13 @@
 
                 <!--------------CENTER___WHERE YOU SEE THE MESSAGES-------------->
                 <div class="central_main">
+                    <div class="user_msg">
+                        <p class="green_chat" >{{userMsg}}</p>
+                    </div>
                     <div class="" v-for="(message, index) in contacts[currentSpeaker].messages" >
                         <p class="white_chat">{{message.text}}</p>
-                        <p class="green_chat">{{userMsg}}</p>
                     </div>
+                    
                     
                 </div>
                 <!-- /center -->
