@@ -93,7 +93,7 @@ const app = new Vue({
     },
     methods:{
          /** select user to chat with */
-         selectPerson(){
+        selectPerson(){
             this.avatar.push(this.currentSpeaker)
             this.currentSpeaker =''
          },
