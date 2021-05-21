@@ -92,12 +92,16 @@ overflow-Y: scroll;
 /* --------------------------------------------------------------classes for messages */
 
 .green_chat{
-
+    background-color: rgb(175, 228, 175);
+    padding: 4px;
+    width: 20%;
+    border-radius: 5px;
+    margin: 5% 75%;
 }
 .white_chat{
     background-color: white;
     padding: 4px;
     width: 20%;
     border-radius: 5px;
-    margin: 20px;
+    margin: 20px 35px;
 }
