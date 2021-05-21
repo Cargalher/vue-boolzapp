@@ -99,7 +99,7 @@ const app = new Vue({
          },
         //  send a message
          sendMessage(){
-            this.conversation.push(this.userMsg)
+            this.userMsg.push(this.conversation)
             this.conversation = ''
         },
     }
