@@ -3,7 +3,7 @@ const app = new Vue({
     data:{
         conversation: '',
         userMsg: [],
-        currentSpeaker:[],
+        currentSpeaker: 0,
         contacts: [
             {
                 name: 'Fred',

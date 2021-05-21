@@ -47,7 +47,9 @@
                     <input class="input_search" type="search" name="" id="" placeholder="&#128269;Cerca o inizia una nuova chat">
                 </div>
                 <!-- /Search users -->
-                <!-- User list -->
+
+
+                <!-- -------------------------UserS list -------------------------------------------->
                 <div class="user-list d-flex  flex-column border">
                     <ul>
                         <li v-for="(contact, index) in contacts">
@@ -66,7 +68,9 @@
             <!-- /sidebar with all the contacts -->
 
             <main class="d-flex flex-column pr-4 pt-4 pb-4">
-                <!-- top -->
+
+
+                <!--------------TOP___WERE YOU SEE THE PERSON YOU ARE CHATTING WITH -->
                 <div class="top_main d-flex align-items-center justify-content-between p-2">
                     <div class="d-flex mr-4">
                         <!-- {{avatar}} -->
@@ -81,13 +85,18 @@
                 </div>
                 <!-- /top -->
 
-                <!-- center -->
+
+
+                <!--------------CENTER___WHERE YOU SEE THE MESSAGES-------------->
                 <div class="central_main">
                     <p>{{conversation}}</p>
                 </div>
                 <!-- /center -->
 
-                <!-- bottom -->
+
+
+
+                <!--------------BOTTOM ___WHERE YOU WRITE THE MESSAGES-------------->
                 <div class="bottom_main d-flex align-items-center">
                     <i class="far fa-smile mr-3 text-secondary"></i>
                    
@@ -95,6 +104,8 @@
                     <i class="fas fa-microphone ml-3 text-secondary"></i>
                 </div>
                 <!-- /bottom -->
+
+
                 
             </main>
 
