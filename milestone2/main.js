@@ -92,11 +92,12 @@ const app = new Vue({
         
     },
     methods:{
-         /** write a message */
+         /** select user to chat with */
          selectPerson: function(person){
             this.currentSpeaker = person;
             return this.currentSpeaker =''
          },
+        //  send a message
          sendMessage(){
             this.conversation.push(this.userMsg)
             this.conversation = ''
