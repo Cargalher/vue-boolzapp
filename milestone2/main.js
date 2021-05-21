@@ -93,9 +93,9 @@ const app = new Vue({
     },
     methods:{
          /** write a message */
-         selectPerson(){
-            this.avatar.push(this.currentSpeaker)
-            this.currentSpeaker =''
+         selectPerson: function(person){
+            this.currentSpeaker = person;
+            return this.currentSpeaker =''
          },
          sendMessage(){
             this.conversation.push(this.userMsg)
