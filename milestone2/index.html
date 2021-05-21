@@ -52,8 +52,9 @@
                 <!-- -------------------------UserS list -------------------------------------------->
                 <div class="user-list d-flex  flex-column border">
                     <ul>
-                        <li v-for="(contact, index) in contacts">
-                            <div class="avatar d-flex " @click="selectPerson(index)">
+                        <li v-for="(contact, index) in contacts"
+                        @click="selectPerson(index)">
+                            <div class="avatar d-flex ">
                                 <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="" class="d-flex align-items-center ">
                                 <p class="d-flex align-items-center">{{contact.name}}</p>
                                 
