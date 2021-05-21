@@ -2,7 +2,7 @@ const app = new Vue({
     el: '#root',
     data:{
         conversation: '',
-        userMsg: '',
+        userMsg: [],
         currentSpeaker: 0,          //index-contact
         currentMessage: null,       //index-message
         contacts: [
@@ -101,7 +101,7 @@ const app = new Vue({
          sendMessage(){
             this.userMsg.push(this.conversation)
             this.conversation = ''
-            this.selectPerson(index)[contact].messages.push(sendMessage);
+            // this.selectPerson(index)[contact].messages.push(sendMessage);
         },
     }
 })
