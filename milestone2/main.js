@@ -4,7 +4,7 @@ const app = new Vue({
         conversation: '',
         userMsg: [],
         currentSpeaker: 0,          //index-contact
-        currentMessage: null,       //index-message
+               
         contacts: [
             {
                 name: 'Fred',

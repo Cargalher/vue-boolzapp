@@ -1,12 +1,15 @@
 body{
     background-color: #DCDBD2;
     width: 100%;
-    height: 100vh;
+   position: relative;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 #root{
     background-color: #009688;
     height: 10vh;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
 }
 img{
     width: 70px;
@@ -15,10 +18,11 @@ img{
 
 .wrapper{
     width: 90%;
-    height: 100vh;
+   
 }
 aside{
-    height: 100vh;
+    height: 80vh;
+    
 }
 .user_name{
     background-color: #EAEAEA;
@@ -66,7 +70,7 @@ li{
 /*------------------------------------------------------------ MAIN */
 main{
     width: 100%;
-    height: 100vh;
+    height: 80vh;
 }
 .top_main{
     background-color: #EAEAEA;
@@ -74,7 +78,7 @@ main{
 }
 .central_main{
 background-image: url(./img/wallpaper.jpg);
-height: 81vh;
+height: 55vh;
 overflow-Y: scroll;
 }
 .input_write{
