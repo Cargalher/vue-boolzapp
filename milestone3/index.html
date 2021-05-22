@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Boolzapp</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root">
+        
+        <div class="wrapper container d-flex ">
+            <!-- sidebar with all the contacts -->
+            <aside class="d-flex flex-column pt-4">
+
+                <!-- top_user name -->
+                <div class="user_name d-flex align-items-center p-2">
+                    <div class="d-flex mr-4">
+                        <img src="./img/io.jpg" alt="" class="d-flex align-items-center ">
+                        <p class="d-flex align-items-center">User</p>
+                    </div>
+                    <div class="ml-4 d-flex">
+                        <i class="fas fa-circle-notch p-2"></i>
+                        <i class="far fa-comment-alt p-2"></i>
+                        <i class="fas fa-ellipsis-v p-2"></i>
+                    </div>
+                </div>
+                <!-- /top_user name -->
+
+                <!-- Notifications -->
+                <div class="notifications d-flex align-items-center p-2">
+                    <i class="fas fa-bell-slash mr-2"></i>
+                    <p> Ricevi notifiche di nuovi messaggi <br> <span class="highlighted">Attiva notifiche desktop</span> </p>
+                </div>
+                <!-- /Notifications -->
+
+                <!-- Search users -->
+                
+                <div class="searcher">
+                    <input class="input_search" type="search" name="" id="" placeholder="&#128269;Cerca o inizia una nuova chat"  @keyup="search" v-model="searchText" name="search">
+                </div>
+                <!-- /Search users -->
+
+
+                <!-- -------------------------UserS list -------------------------------------------->
+                <div class="user-list d-flex  flex-column border">
+                    <ul>
+                        <li v-for="(contact, index) in contacts"
+                        v-if="contact.visible"
+                        @click="selectPerson(index)">
+                            <div class="avatar d-flex ">
+                                <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="" class="d-flex align-items-center ">
+                                <p class="d-flex align-items-center">{{contact.name}}</p>
+                                
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- /User list -->
+
+            </aside>
+            <!-- /sidebar with all the contacts -->
+
+            <main class="d-flex flex-column pr-4 pt-4">
+
+
+                <!--------------TOP___WERE YOU SEE THE PERSON YOU ARE CHATTING WITH -->
+                <div class="top_main d-flex align-items-center justify-content-between p-2">
+                    <div class="d-flex mr-4">
+                        <!-- {{avatar}} -->
+                        <img class="d-flex align-items-center avatar" :src="'./img/avatar' + contacts[currentSpeaker].avatar + '.jpg'" alt="">
+                        <p class="d-flex align-items-center">{{contacts[currentSpeaker].name}}</p>
+                    </div>
+                    <div class="ml-4">
+                        <i class="fas fa-search p-2"></i>
+                        <i class="fas fa-paperclip p-2"></i>
+                        <i class="fas fa-ellipsis-v p-2"></i>
+                    </div>
+                </div>
+                <!-- /top -->
+
+
+
+                <!--------------CENTER___WHERE YOU SEE THE MESSAGES-------------->
+                <div class="central_main">
+                    <div class="user_msg">
+                        <p class="green_chat" >{{userMsg}}</p>
+                    </div>
+                    <div class="" v-for="(message, index) in contacts[currentSpeaker].messages" >
+                        <p class="white_chat">{{message.text}}</p>
+                    </div>
+                    
+                    
+                </div>
+                <!-- /center -->
+
+
+
+
+                <!--------------BOTTOM ___WHERE YOU WRITE THE MESSAGES-------------->
+                <div class="bottom_main d-flex align-items-center">
+                    <i class="far fa-smile mr-3 text-secondary"></i>
+                   
+                    <input v-model="conversation" class="input_write" type="text" name="" id="" placeholder="Scrivi un messaggio" @keyup.enter="sendMessage">
+                    <i class="fas fa-microphone ml-3 text-secondary"></i>
+                </div>
+                <!-- /bottom -->
+
+
+                
+            </main>
+
+        </div>
+
+    </div>
+
+    <!-- VUE JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+    <script src="./main.js"></script>
+</body>
+</html>

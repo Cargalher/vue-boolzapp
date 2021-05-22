@@ -4,7 +4,7 @@ const app = new Vue({
         conversation: '',
         userMsg: [],
         currentSpeaker: 0,          //index-contact
-               
+        searchText: '',     
         contacts: [
             {
                 name: 'Fred',
@@ -103,6 +103,17 @@ const app = new Vue({
             this.conversation = ''
             // this.selectPerson(index)[contact].messages.push(sendMessage);
         },
-       
+        search(){
+            // milestone4_search contact to chat usin methods .forEach and conditional statements
+            this.contacts.forEach((contact)=> {
+                    let contactName = contact.name.toLowerCase();
+                    let searchedName = this.searchText.toLowerCase();
+                    if(contactName.includes(searchedName)) {
+                        contact.visible = true;
+                    }else{
+                        contact.visible = false;
+                    }
+            });
+        }
     }
 })
