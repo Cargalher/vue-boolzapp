@@ -58,12 +58,6 @@ i{
     width: 100%;
     padding: 11px;
 }
-
-li{
-    list-style-type: none;
-    padding:20px 0;
-   
-}
 .user-list{
     background-color: white;
     overflow-Y: scroll;
@@ -96,17 +90,25 @@ overflow-Y: scroll;
 
 /* --------------------------------------------------------------classes for messages */
 
-.green_chat{
-    background-color: rgb(175, 228, 175);
-    padding: 4px;
-    width: 20%;
-    border-radius: 5px;
-    margin: 5% 75%;
-}
-.white_chat{
-    background-color: white;
+
+.message.sent, .message.received{
+    
     padding: 4px;
     width: 20%;
     border-radius: 5px;
     margin: 20px 35px;
+}
+.message.sent{
+    background-color: rgb(149, 240, 149);
+    align-self: flex-end;
+}
+
+.message.received{
+    background-color: white;
+    align-self: flex-start;
+}
+.contact.active{
+    background-color: #80808075;
+    font-weight: 700;
+    color:white;
 }

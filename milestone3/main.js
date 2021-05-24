@@ -2,7 +2,6 @@ const app = new Vue({
     el: '#root',
     data:{
         conversation: '',
-        userMsg: [],
         currentSpeaker: 0,          //index-contact
         searchText: '',     
         contacts: [
@@ -98,11 +97,11 @@ const app = new Vue({
             this.currentSpeaker = index
          },
         //  send a message
-         sendMessage(){
-            this.userMsg.push(this.conversation)
-            this.conversation = ''
-            // this.selectPerson(index)[contact].messages.push(sendMessage);
-        },
+        //  sendMessage(){
+        //     this.userMsg.push(this.conversation)
+        //     this.conversation = ''
+        //     // this.selectPerson(index)[contact].messages.push(sendMessage);
+        // },
         search(){
             // milestone4_search contact to chat usin methods .forEach and conditional statements
             this.contacts.forEach((contact)=> {

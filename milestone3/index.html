@@ -43,26 +43,23 @@
                 <!-- /Notifications -->
 
                 <!-- Search users -->
-                
                 <div class="searcher">
-                    <input class="input_search" type="search" name="" id="" placeholder="&#128269;Cerca o inizia una nuova chat"  @keyup="search" v-model="searchText" name="search">
+                    <input class="input_search" type="search" name="" id="" placeholder="&#128269;Cerca o inizia una nuova chat">
                 </div>
                 <!-- /Search users -->
 
 
                 <!-- -------------------------UserS list -------------------------------------------->
-                <div class="user-list d-flex  flex-column border">
-                    <ul>
-                        <li v-for="(contact, index) in contacts"
-                        v-if="contact.visible"
-                        @click="selectPerson(index)">
+                <div class="user-list d-flex  flex-column ">
+                        <div class="contact border p-3" 
+                        :class="currentSpeaker === index ? 'active' : '' "
+                        v-for="(contact, index) in contacts" @click="selectPerson(index)">
                             <div class="avatar d-flex ">
                                 <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="" class="d-flex align-items-center ">
                                 <p class="d-flex align-items-center">{{contact.name}}</p>
                                 
                             </div>
-                        </li>
-                    </ul>
+                        </div>
 
                 </div>
                 <!-- /User list -->
@@ -91,15 +88,15 @@
 
 
                 <!--------------CENTER___WHERE YOU SEE THE MESSAGES-------------->
-                <div class="central_main">
-                    <div class="user_msg">
+                <div class="central_main d-flex flex-column">
+                    <!-- <div class="user_msg">
                         <p class="green_chat" >{{userMsg}}</p>
+                    </div> -->
+                    <div class="message" :class="message.status === 'sent' ? 'sent' : 'received' " 
+                    v-for="(message, index) in contacts[currentSpeaker].messages" >
+                        {{message.text}}
+                        <div>{{message.date}}</div>
                     </div>
-                    <div class="" v-for="(message, index) in contacts[currentSpeaker].messages" >
-                        <p class="white_chat">{{message.text}}</p>
-                    </div>
-                    
-                    
                 </div>
                 <!-- /center -->
 
