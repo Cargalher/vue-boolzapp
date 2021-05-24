@@ -91,24 +91,31 @@ overflow-Y: scroll;
 /* --------------------------------------------------------------classes for messages */
 
 
-.message.sent, .message.received, .myMsg{
+.message.sent, .message.received{
     
     padding: 4px;
-    width: 20%;
+    width: fit-content;
     border-radius: 5px;
     margin: 20px 35px;
 }
-.message.sent, .myMsg{
-    background-color: rgb(149, 240, 149);
+.message.sent{
+    background-color: rgb(178 238 161);
     align-self: flex-end;
 }
 
 .message.received{
     background-color: white;
     align-self: flex-start;
+   
 }
 .contact.active{
     background-color: #80808075;
     font-weight: 700;
     color:white;
+}
+.dateTime{
+    color: gray;
+    font-size: 11px;
+    display: flex;
+    justify-content: flex-end;
 }

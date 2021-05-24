@@ -2,8 +2,7 @@ const app = new Vue({
     el: '#root',
     data:{
         conversation: '',
-        currentSpeaker: 0, 
-               //index-contact
+        currentSpeaker: 0,  //index-contact
         searchText: '',     
         contacts: [
             {
@@ -106,7 +105,25 @@ const app = new Vue({
 
             })
           this.conversation= ''
+          
        },
+        // Answer pc
+        // AutomaticAnswer(){
+        //     this.contacts[this.currentSpeaker].messages.push({
+        //         date: '17/11/2020 09:57',
+        //     message: 'ok',
+        //     status: 'received'
+        //     })
+            
+        // },
+        setTimeOut(){
+            this.pcMsg = ({
+                date: '10/01/2020 15:50:00',
+                text: 'Ok',
+                status: 'received'
+            },1000);
+            this.contacts[this.currentSpeaker].messages.push(pcMsg)
+        },
         search(){
             // milestone4_search contact to chat usin methods .forEach and conditional statements
             this.contacts.forEach((contact)=> {

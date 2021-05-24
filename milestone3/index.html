@@ -95,7 +95,7 @@
                     <div class="message" :class="message.status === 'sent' ? 'sent' : 'received' " 
                     v-for="(message, index) in contacts[currentSpeaker].messages" >
                         {{message.text}}
-                        <div>{{message.date}}</div>
+                        <div class="dateTime">{{message.date}}</div>
                     </div>
                    
                 </div>
