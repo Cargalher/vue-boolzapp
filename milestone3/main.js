@@ -3,7 +3,7 @@ const app = new Vue({
     data:{
         conversation: '',
         currentSpeaker: 0, 
-        userMsg: [],         //index-contact
+               //index-contact
         searchText: '',     
         contacts: [
             {
@@ -99,9 +99,13 @@ const app = new Vue({
          },
         //  send a message
           sendMessage(){
-            this.userMsg.push(this.conversation)
-            this.conversation = ''
-           
+            this.contacts[this.currentSpeaker].messages.push({
+                date: '10/01/2020 15:50:00',
+                text: this.conversation,
+                status: 'sent'
+
+            })
+          this.conversation= ''
        },
         search(){
             // milestone4_search contact to chat usin methods .forEach and conditional statements
