@@ -91,14 +91,14 @@ overflow-Y: scroll;
 /* --------------------------------------------------------------classes for messages */
 
 
-.message.sent, .message.received{
+.message.sent, .message.received, .myMsg{
     
     padding: 4px;
     width: 20%;
     border-radius: 5px;
     margin: 20px 35px;
 }
-.message.sent{
+.message.sent, .myMsg{
     background-color: rgb(149, 240, 149);
     align-self: flex-end;
 }
@@ -110,5 +110,5 @@ overflow-Y: scroll;
 .contact.active{
     background-color: #80808075;
     font-weight: 700;
-    font-size: larger;
+    color:white;
 }
