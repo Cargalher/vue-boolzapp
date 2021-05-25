@@ -5,7 +5,7 @@ const app = new Vue({
         userMsg: [],
         currentSpeaker: 0,          //index-contact
         searchText: '', 
-        dropdownList: ['Message Info', 'Delete Message'],    
+           
         contacts: [
             {
                 name: 'Fred',
@@ -113,7 +113,7 @@ const app = new Vue({
             this.answerPc();
           
        },
-    //    function to generate an automatic answer after 1sec
+        //    function to generate an automatic answer after 1sec
        answerPc() {
            setTimeout(() => {
                 this.contacts[this.currentSpeaker].messages.push({
@@ -135,12 +135,11 @@ const app = new Vue({
                     }
             });
         },
-        toggleShow: function(){
-            this.showMenu = !this.showMenu;
+       deleteMsg(index,message){
+           this.message.splice(index,1)
+           
 
-        },
-        messageClicked: function(item){
-            this.toggleShow();
-        }
+       }
+        
     }
 })

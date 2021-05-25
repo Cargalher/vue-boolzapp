@@ -95,12 +95,17 @@
                     <div class="message" :class="message.status === 'sent' ? 'sent' : 'received' " 
                     v-for="(message, index) in contacts[currentSpeaker].messages">
                         {{message.text}}
-                        <div class="dateTime" click="deleteMsg">
+                        <div class="dateTime">
                             {{message.date}}
-                                <dropdown>
-                                    <span>Message info</span>
-                                    <span>Delete message</span>
-                                </dropdown>
+                            <div class="dropdown">
+                                <i class="fas fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li>Message Info</li>
+                                        <li class="delete_msg"  @click="deleteMsg">Delete Message</li>
+                                    </ul>
+                                </div>
+                              </div>
                         </div>
                     </div>
                 </div>

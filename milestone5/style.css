@@ -122,3 +122,30 @@ overflow-Y: scroll;
     display: flex;
     justify-content: flex-end;
 }
+/* dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0px;
+        background-color: #f9f9f9;
+        min-width: 134px;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        border-radius: 3px;
+        z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .fa-chevron-down{
+      visibility: hidden;
+  }
+  li{
+      list-style-type: none;
+      padding: 15px 0;
+  }
