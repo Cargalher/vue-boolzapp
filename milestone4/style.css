@@ -1,3 +1,4 @@
+/* ---------------------------------------------------------------general */
 body{
     background-color: #DCDBD2;
     width: 100%;
@@ -21,6 +22,11 @@ img{
     width: 90%;
    
 }
+i{
+    color:#B1B1B1;
+    font-size:24px;
+}
+/* -------------------------------------------------------------sideBar */
 aside{
     height: 80vh;
     
@@ -29,10 +35,7 @@ aside{
     background-color: #EAEAEA;
     border-right: 1px solid lightgray;
 }
-i{
-    color:#B1B1B1;
-    font-size:24px;
-}
+
 .notifications > i{
     font-size: 35px;
     border-radius: 50%;
@@ -88,7 +91,7 @@ overflow-Y: scroll;
     
 }
 
-/* --------------------------------------------------------------classes for messages */
+/* ------------------------------------------------------------classes for messages */
 
 
 .message.sent, .message.received{
