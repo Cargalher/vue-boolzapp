@@ -108,12 +108,12 @@ const app = new Vue({
             });
             this.conversation= ''
             //   RECEIVING AND AUTOMATIC ANSWER OF OKAY
-            this. answerPc();
+            this.answerPc();
           
        },
     //    function to generate an automatic answer after 1sec
-       answerPc(){
-           setTimeOut(() => {
+       answerPc() {
+           setTimeout(() => {
                 this.contacts[this.currentSpeaker].messages.push({
                     date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     text: 'Okay😉👌',
@@ -121,6 +121,7 @@ const app = new Vue({
                 });
            }, 1000)
        },
+       
         search(){
             // milestone4_search contact to chat usin methods .forEach and conditional statements
             this.contacts.forEach((contact)=> {
