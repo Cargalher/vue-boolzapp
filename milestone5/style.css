@@ -1,0 +1,124 @@
+/* ---------------------------------------------------------------general */
+body{
+    background-color: #DCDBD2;
+    width: 100%;
+    height: 80vh;
+ 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+#root{
+    background-color: #009688;
+    height: 10vh;
+   
+   
+    width: 100%;
+}
+img{
+    width: 70px;
+    border-radius: 50%;
+}
+
+.wrapper{
+    width: 90%;
+   
+}
+i{
+    color:#B1B1B1;
+    font-size:24px;
+}
+/* -------------------------------------------------------------sideBar */
+aside{
+    height: 80vh;
+    
+}
+.user_name{
+    background-color: #EAEAEA;
+    border-right: 1px solid lightgray;
+}
+
+.notifications > i{
+    font-size: 35px;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: white;
+    color: #8EDAFC;
+}
+.notifications{
+    background-color: #8EDAFC;
+}
+.highlighted{
+    text-decoration: underline;
+    color:gray;
+    font-size: 12px;
+}
+.searcher{
+    background-color: white;
+    padding:5px;
+}
+.input_search{
+    border:1px solid lightgrey;
+    width: 100%;
+    padding: 11px;
+}
+.user-list{
+    background-color: white;
+    overflow-Y: scroll;
+}
+/*------------------------------------------------------------ MAIN */
+main{
+    width: 100%;
+    height: 80vh;
+}
+.top_main{
+    background-color: #EAEAEA;
+    
+}
+.central_main{
+background-image: url(./img/wallpaper.jpg);
+height: 55vh;
+overflow-Y: scroll;
+}
+.input_write{
+    border:1px solid transparent;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+.bottom_main{
+    background-color: #F3EEEA;
+    padding:20px;
+    
+}
+
+/* ------------------------------------------------------------classes for messages */
+
+
+.message.sent, .message.received{
+    
+    padding: 4px;
+    width: fit-content;
+    border-radius: 5px;
+    margin: 20px 35px;
+}
+.message.sent{
+    background-color: rgb(178 238 161);
+    align-self: flex-end;
+}
+
+.message.received{
+    background-color: white;
+    align-self: flex-start;
+   
+}
+.contact.active{
+    background-color: #80808075;
+    font-weight: 700;
+    color:white;
+}
+.dateTime{
+    color: gray;
+    font-size: 11px;
+    display: flex;
+    justify-content: flex-end;
+}
