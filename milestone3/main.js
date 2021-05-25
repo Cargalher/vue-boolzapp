@@ -3,6 +3,7 @@ const app = new Vue({
     data:{
         conversation: '',
         currentSpeaker: 0,  //index-contact
+        pcMsg: '',
         searchText: '',     
         contacts: [
             {
@@ -107,15 +108,6 @@ const app = new Vue({
           this.conversation= ''
           
        },
-        // Answer pc
-        // AutomaticAnswer(){
-        //     this.contacts[this.currentSpeaker].messages.push({
-        //         date: '17/11/2020 09:57',
-        //     message: 'ok',
-        //     status: 'received'
-        //     })
-            
-        // },
         setTimeOut(){
             this.pcMsg = ({
                 date: '10/01/2020 15:50:00',
