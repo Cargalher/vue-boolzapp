@@ -99,8 +99,9 @@ const app = new Vue({
          },
         //  send a message
           sendMessage(){
+            //   select the messages of the current active contact
             this.contacts[this.currentSpeaker].messages.push({
-                date: '10/01/2020 15:50:00',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 text: this.conversation,
                 status: 'sent'
 
@@ -108,14 +109,15 @@ const app = new Vue({
           this.conversation= ''
           
        },
-        setTimeOut(){
-            this.pcMsg = ({
-                date: '10/01/2020 15:50:00',
-                text: 'Ok',
-                status: 'received'
-            },1000);
-            this.contacts[this.currentSpeaker].messages.push(pcMsg)
-        },
+       answerPc(){
+           setTimeOut(() => {
+                this.contacts[this.currentSpeaker].messages.push({
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    text: 'Okay😉👌',
+                    status: 'received'
+                });
+           },1000)
+       },
         search(){
             // milestone4_search contact to chat usin methods .forEach and conditional statements
             this.contacts.forEach((contact)=> {
