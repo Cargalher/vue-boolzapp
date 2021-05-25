@@ -135,8 +135,8 @@ const app = new Vue({
                     }
             });
         },
-       deleteMsg(index,message){
-           this.message.splice(index,1)
+       deleteMsg(message, index){
+        this.contacts[this.currentSpeaker].messages.splice(index,1)
            
 
        }
