@@ -4,7 +4,8 @@ const app = new Vue({
         conversation: '',
         userMsg: [],
         currentSpeaker: 0,          //index-contact
-        searchText: '',     
+        searchText: '', 
+        dropdownList: ['Message Info', 'Delete Message'],    
         contacts: [
             {
                 name: 'Fred',
@@ -51,7 +52,7 @@ const app = new Vue({
                 ],
             },
             {
-                name: 'Jack',
+                name: 'Mario',
                 avatar: '_3',
                 visible: true,
                 messages: [
@@ -133,6 +134,13 @@ const app = new Vue({
                         contact.visible = false;
                     }
             });
+        },
+        toggleShow: function(){
+            this.showMenu = !this.showMenu;
+
+        },
+        messageClicked: function(item){
+            this.toggleShow();
         }
     }
 })
