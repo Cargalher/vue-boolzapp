@@ -94,21 +94,28 @@ overflow-Y: scroll;
 .message.sent, .message.received{
     
     padding: 4px;
-    width: 20%;
+    width: fit-content;
     border-radius: 5px;
     margin: 20px 35px;
 }
 .message.sent{
-    background-color: rgb(149, 240, 149);
+    background-color: rgb(178 238 161);
     align-self: flex-end;
 }
 
 .message.received{
     background-color: white;
     align-self: flex-start;
+   
 }
 .contact.active{
     background-color: #80808075;
     font-weight: 700;
-    font-size: larger;
+    color:white;
+}
+.dateTime{
+    color: gray;
+    font-size: 11px;
+    display: flex;
+    justify-content: flex-end;
 }

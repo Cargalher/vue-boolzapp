@@ -98,11 +98,30 @@ const app = new Vue({
             this.currentSpeaker = index
          },
         //  send a message
-         sendMessage(){
-            this.userMsg.push(this.conversation)
-            this.conversation = ''
-            // this.selectPerson(index)[contact].messages.push(sendMessage);
-        },
+        sendMessage(){
+            //   select the messages of the current active contact
+            this.contacts[this.currentSpeaker].messages.push({
+                // current daye and time using dayjs
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                text: this.conversation,
+                status: 'sent'
+
+            });
+            this.conversation= ''
+            //   RECEIVING AND AUTOMATIC ANSWER OF OKAY
+            this.answerPc();
+          
+       },
+    //    function to generate an automatic answer after 1sec
+       answerPc() {
+           setTimeout(() => {
+                this.contacts[this.currentSpeaker].messages.push({
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    text: 'Okay😉👌',
+                    status: 'received'
+                });
+           }, 1000)
+       },
         search(){
             // milestone4_search contact to chat usin methods .forEach and conditional statements
             this.contacts.forEach((contact)=> {

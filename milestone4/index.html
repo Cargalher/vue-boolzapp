@@ -51,8 +51,7 @@
 
 
                 <!-- -------------------------UserS list -------------------------------------------->
-                <div class="user-list d-flex  flex-column border">
-                   
+                <div class="user-list d-flex  flex-column">
                         <div  class="contact border p-3"
                         v-if="contact.visible"
                         :class="currentSpeaker === index ? 'active' : '' "
@@ -93,13 +92,10 @@
 
                 <!--------------CENTER___WHERE YOU SEE THE MESSAGES-------------->
                 <div class="central_main d-flex flex-column">
-                    <!-- <div class="user_msg">
-                        <p class="green_chat" >{{userMsg}}</p>
-                    </div> -->
                     <div class="message" :class="message.status === 'sent' ? 'sent' : 'received' " 
                     v-for="(message, index) in contacts[currentSpeaker].messages" >
                         {{message.text}}
-                        <div>{{message.date}}</div>
+                        <div class="dateTime">{{message.date}}</div>
                     </div>
                 </div>
                 <!-- /center -->
@@ -126,6 +122,9 @@
 
     <!-- VUE JS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+     <!-- Day JS -->
+     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+
 
     <script src="./main.js"></script>
 </body>
