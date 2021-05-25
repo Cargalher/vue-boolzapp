@@ -3,7 +3,6 @@ const app = new Vue({
     data:{
         conversation: '',
         currentSpeaker: 0,  //index-contact
-        pcMsg: '',
         searchText: '',     
         contacts: [
             {
@@ -98,17 +97,21 @@ const app = new Vue({
             this.currentSpeaker = index
          },
         //  send a message
-          sendMessage(){
+        sendMessage(){
             //   select the messages of the current active contact
             this.contacts[this.currentSpeaker].messages.push({
+                // current daye and time using dayjs
                 date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 text: this.conversation,
                 status: 'sent'
 
-            })
-          this.conversation= ''
+            });
+            this.conversation= ''
+            //   RECEIVING AND AUTOMATIC ANSWER OF OKAY
+            this. answerPc();
           
        },
+    //    function to generate an automatic answer after 1sec
        answerPc(){
            setTimeOut(() => {
                 this.contacts[this.currentSpeaker].messages.push({
@@ -116,7 +119,7 @@ const app = new Vue({
                     text: 'Okay😉👌',
                     status: 'received'
                 });
-           },1000)
+           }, 1000)
        },
         search(){
             // milestone4_search contact to chat usin methods .forEach and conditional statements
